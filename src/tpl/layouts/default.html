@@ -6,20 +6,17 @@
 
 	<body>
 		<div class="page" id="page" onhashchange="getProjectData()">
-			<!-- Sidebar -->
-			<div class="div1">{{> sidebar}}</div>
-
-			<!-- Header -->
-			<div class="div2">
-				{{> header }}
-				<div class="upper-bg"></div>
+			<div class="layout-header">
+				<div class="container">{{> header }}</div>
 			</div>
+			<div class="upper-bg"></div>
+			<div class="layout-sidebar">{{> sidebar}}</div>
 
-			<!-- Main Content  -->
-			<main class="main">{{> body }}</main>
+			<main class="layout-content">
+				<div class="container">{{> body }}</div>
+			</main>
 
-			<!-- Footer -->
-			<div class="div4">
+			<div class="layout-footer">
 				<div class="lower-bg"></div>
 				{{> footer}}
 			</div>

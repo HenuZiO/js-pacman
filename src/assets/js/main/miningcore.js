@@ -69,10 +69,8 @@ const getProjectData = () =>
 				loadMinersPage(poolsData, poolMinersData);
 				break;
 			default:
-				$('.header__menu-list').hide();
 				$('.header__burger').hide();
 				$('.header__mobile-menu-list').hide();
-				$('.header__menu--right').hide();
 				$('.sidebar-coin').hide();
 				$('.page-dashboard').hide();
 				$('.page-blocks').hide();

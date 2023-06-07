@@ -1,34 +1,9 @@
 /* Block - sidebar */
 
 .sidebar {
-	width: $sidebar-width;
-	height: 100vh;
-	background-color: $primary;
+	max-width: $sidebar-width;
+	width: 100%;
 	box-shadow: 5px 0 15px rgba(#050505, 0.1);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: $z-index-sidebar;
-
-	@include breakpoint($screen-1600) {
-		width: 31rem;
-	}
-
-	@include breakpoint($screen-1500) {
-		width: 32rem;
-	}
-
-	@include breakpoint($screen-1435) {
-		width: 30rem;
-	}
-
-	@include breakpoint($screen-1400) {
-		width: 30rem;
-	}
-
-	@include breakpoint($screen-1366) {
-		width: 31rem;
-	}
 
 	@include breakpoint($screen-1280) {
 		@include hide-sidebar-on-mobile(none);
