@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    {{> head }}
-  </head>
+	<head>
+		{{> head }}
+	</head>
 
-  <body>
-    <div class="page" id="page" onhashchange="getProjectData()">
-      <!-- Sidebar -->
-      <div class="div1">{{> sidebar}}</div>
+	<body>
+		<div class="page" id="page" onhashchange="getProjectData()">
+			<!-- Sidebar -->
+			<div class="div1">{{> sidebar}}</div>
 
-      <!-- Header -->
-      <div class="div2">{{> header }}</div>
+			<!-- Header -->
+			<div class="div2">
+				{{> header }}
+				<div class="upper-bg"></div>
+			</div>
 
-      <!-- Main Content  -->
-      <main class="main">{{> body }}</main>
+			<!-- Main Content  -->
+			<main class="main">{{> body }}</main>
 
-      <!-- Footer -->
-      <div class="div4">{{> footer}}</div>
-    </div>
+			<!-- Footer -->
+			<div class="div4">
+				<div class="lower-bg"></div>
+				{{> footer}}
+			</div>
+		</div>
 
-    <script src="assets/js/main.js"></script>
-    <script defer type="text/javascript">
-      $(document).ready(function () {
-        getProjectData();
-      });
-    </script>
-  </body>
+		<script src="assets/js/main.js"></script>
+		<script defer type="text/javascript">
+			$(document).ready(function () {
+				getProjectData();
+			});
+		</script>
+	</body>
 </html>
