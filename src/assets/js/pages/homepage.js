@@ -1,27 +1,29 @@
 function loadHomePage(data) {
-  const uniquePoolAlgo = Array.from(
-    new Set(
-      data.map((el) => {
-        return el.coin.algorithm;
-      }),
-    ),
-  );
+	const uniquePoolAlgo = Array.from(
+		new Set(
+			data.map(el => {
+				return el.coin.algorithm;
+			})
+		)
+	);
 
-  let sortedCoinBlock = ``;
+	let sortedCoinBlock = ``;
 
-  uniquePoolAlgo.forEach((value) => {
-    coinFilterResult = data.filter((element) => {
-      return element.coin.algorithm == value;
-    });
+	uniquePoolAlgo.forEach(value => {
+		coinFilterResult = data.filter(element => {
+			return element.coin.algorithm == value;
+		});
 
-    let algoPoolHashrate = coinFilterResult.map((pool) => pool.poolStats.poolHashrate);
-    let totalAlgoHashrate = formatHash(
-      algoPoolHashrate.reduce((sum, pool) => sum + pool),
-      5,
-      'H/s',
-    );
+		let algoPoolHashrate = coinFilterResult.map(
+			pool => pool.poolStats.poolHashrate
+		);
+		let totalAlgoHashrate = formatHash(
+			algoPoolHashrate.reduce((sum, pool) => sum + pool),
+			5,
+			'H/s'
+		);
 
-    sortedCoinBlock += `
+		sortedCoinBlock += `
     <div class="coin-sort__container">
      <section class="coin-sort">
      <div class="coin-sort__left">
@@ -37,21 +39,21 @@ function loadHomePage(data) {
      <div class="coin-item__container" id="pool-coins">
      `;
 
-    $.each(coinFilterResult, function (index, value) {
-      let coinLogoHTML =
-        "<img class='coin-item__top-img' src='https://altcoinpool.ru/img/coin/icon/" +
-        value.coin.type.toLowerCase() +
-        ".png' />";
+		$.each(coinFilterResult, function (index, value) {
+			let coinLogoHTML =
+				"<img class='coin-item__top-img' src='https://altcoinpool.ru/img/coin/icon/" +
+				value.coin.type.toLowerCase() +
+				".png' />";
 
-      let coinName = value.coin.name;
-      let coinTicket = value.coin.symbol;
-      let coinAlgo = value.coin.algorithm;
+			let coinName = value.coin.name;
+			let coinTicket = value.coin.symbol;
+			let coinAlgo = value.coin.algorithm;
 
-      if (typeof coinName === 'undefined' || coinName === null) {
-        coinName = value.coin.type;
-      }
+			if (typeof coinName === 'undefined' || coinName === null) {
+				coinName = value.coin.type;
+			}
 
-      sortedCoinBlock += `
+			sortedCoinBlock += `
         <section class='coin-item' href='#${value.id}/dashboard/'>
           <div class='coin-item__top-inner'>
             ${coinLogoHTML}
@@ -64,6 +66,12 @@ function loadHomePage(data) {
                 <span class="coin-item__main-item--right">
                   ${coinAlgo}
                 </span>
+              </li>
+                            <li class="coin-item__main-item">
+                <span>Block Height</span>
+                <span class="coin-item__main-item--right">${
+									value.networkStats.blockHeight
+								}</span>
               </li>
               <li class="coin-item__main-item">
                 <span>Miners</span>
@@ -95,43 +103,24 @@ function loadHomePage(data) {
                   ${value.paymentProcessing.payoutScheme}
                 </span>
               </li>
-              <li class="coin-item__main-item">
-                <span>Status</span>
-                <span class="coin-item__main-item--right">Online</span>
-              </li>
+
             </ul>
           </div>
         </section>`;
-    });
+		});
 
-    let emptyCardCount = 0;
+		sortedCoinBlock += `</div>`;
+	});
 
-    while (emptyCardCount < 1) {
-      sortedCoinBlock += `
-      <section class="coin-item coin-item--empty">
-      <div class="coin-item__top-inner">
-      <span class="coin-item__top-img--empty"></span>
-      <h3 class="coin-item__top-title">Empty Slot</h3></div>
-      <div class="coin-item__main coin-item__main--empty">
-      <p class="coin-item__paragraph">We haven\'t added a new coin yet.</p>
-      <p class="coin-item__paragraph">In this place we can place your coin.</p>
-      <p class="coin-item__paragraph">Also, here can be your ad</p>
-      </div>
-      </section>`;
-      emptyCardCount++;
-    }
-    sortedCoinBlock += `</div>`;
-  });
+	$('.algoCoinsBlock').html(sortedCoinBlock);
 
-  $('.algoCoinsBlock').html(sortedCoinBlock);
-
-  $(document).ready(function () {
-    $('.coin-item').on('click', function (event) {
-      let href = $(this).attr('href');
-      if (href) {
-        window.location.href = href;
-        window.location.reload();
-      }
-    });
-  });
+	$(document).ready(function () {
+		$('.coin-item').on('click', function (event) {
+			let href = $(this).attr('href');
+			if (href) {
+				window.location.href = href;
+				window.location.reload();
+			}
+		});
+	});
 }

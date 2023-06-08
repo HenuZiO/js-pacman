@@ -1,9 +1,10 @@
 /* Block - sidebar */
 
 .sidebar {
-	max-width: $sidebar-width;
 	width: 100%;
 	box-shadow: 5px 0 15px rgba(#050505, 0.1);
+	display: flex;
+	flex-direction: column;
 
 	@include breakpoint($screen-1280) {
 		@include hide-sidebar-on-mobile(none);

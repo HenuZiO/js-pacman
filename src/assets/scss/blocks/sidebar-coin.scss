@@ -1,27 +1,24 @@
 /* Block - sidebar */
 
 .sidebar-coin {
-	width: $sidebar-width;
-	height: 100%;
+	max-width: 40rem;
+	width: 100%;
+	max-height: 1500px;
 	background-color: $primary;
 	box-shadow: 5px 0 15px rgba(#050505, 0.1);
 	z-index: $z-index-sidebar;
 	overflow: scroll;
 
+	@include breakpoint($screen-1920) {
+		width: 39rem;
+	}
+
 	@include breakpoint($screen-1600) {
-		width: 31rem;
+		width: 36rem;
 	}
 
-	@include breakpoint($screen-1465) {
-		width: 31rem;
-	}
-
-	@include breakpoint($screen-1440) {
-		width: 31rem;
-	}
-
-	@include breakpoint($screen-1435) {
-		width: 30rem;
+	@include breakpoint($screen-1366) {
+		width: 34rem;
 	}
 
 	@include breakpoint($screen-1300) {

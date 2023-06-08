@@ -21,10 +21,6 @@
 	&__menu {
 		margin-left: 1.5rem;
 
-		@include breakpoint($screen-1300) {
-			display: none;
-		}
-
 		@include breakpoint($screen-1280) {
 			display: none;
 		}
@@ -42,10 +38,6 @@
 		width: 50%;
 		display: flex;
 		justify-content: flex-end;
-
-		@include breakpoint($screen-1300) {
-			width: 0%;
-		}
 	}
 
 	&__menu-list {

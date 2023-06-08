@@ -16,12 +16,12 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		grid-column-gap: 2rem;
-		grid-row-gap: 2rem;
+		grid-row-gap: 3rem;
 		justify-items: center;
 	}
 
 	&__menu {
-		width: 70%;
+		width: 90%;
 	}
 
 	&__menu-title {
@@ -37,13 +37,13 @@
 
 	&__menu-list {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: 1rem;
-		row-gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 	}
 
 	&__menu-item {
+		display: flex;
 		margin: 1rem 1.5rem 0 0;
+		width: 100%;
 	}
 
 	&__menu-link {
