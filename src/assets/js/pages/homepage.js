@@ -41,7 +41,7 @@ function loadHomePage(data) {
 
 		$.each(coinFilterResult, function (index, value) {
 			let coinLogoHTML =
-				"<img class='coin-item__top-img' src='https://altcoinpool.ru/img/coin/icon/" +
+				"<img class='coin-item__top-img' src='https://miningpacman.pw/img/coin/icon/" +
 				value.coin.type.toLowerCase() +
 				".png' />";
 

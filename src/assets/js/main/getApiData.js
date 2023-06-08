@@ -5,7 +5,7 @@ const currentAddress = hashList[3];
 
 async function getPoolsData() {
 	try {
-		const response = await fetch('https://api.altcoinpool.ru/api/pools/');
+		const response = await fetch('https://api.miningpacman.pw/api/pools/');
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
 		return data;
@@ -17,7 +17,7 @@ async function getPoolsData() {
 async function getPoolData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}`
+			`https://api.miningpacman.pw/api/pools/${currentPool}`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -30,7 +30,7 @@ async function getPoolData() {
 async function getPoolBlocksData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/blocks?pageSize=150`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/blocks?pageSize=150`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -43,7 +43,7 @@ async function getPoolBlocksData() {
 async function getPoolPaymentsData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/payments?pageSize=50`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/payments?pageSize=50`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -56,7 +56,7 @@ async function getPoolPaymentsData() {
 async function getMinersData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/miners/`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/miners/`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -72,7 +72,7 @@ if (currentPool && currentAddress) {
 async function getMinerData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/miners/${currentAddress}/`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/miners/${currentAddress}/`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -85,7 +85,7 @@ async function getMinerData() {
 async function getMinerPaymentsData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/miners/${currentAddress}/payments?pageSize=30`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/miners/${currentAddress}/payments?pageSize=30`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();

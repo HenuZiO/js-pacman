@@ -69,7 +69,6 @@
     max-width: 320px;
   }
 
-
   &__item {
     flex: 1 0 auto;
     background-color: $secondary;
@@ -78,14 +77,14 @@
     @include breakpoint($screen-875) {
       width: 405px;
       min-width: 300px;
-
     }
 
     @include breakpoint($screen-851) {
       width: 250px;
     }
 
-    @include breakpoint($screen-844) {}
+    @include breakpoint($screen-844) {
+    }
 
     @include breakpoint($screen-820) {
       width: 250px;
@@ -99,7 +98,8 @@
       width: 100%;
     }
 
-    @include breakpoint($screen-500) {}
+    @include breakpoint($screen-500) {
+    }
 
     @include breakpoint($screen-393) {
       width: 100%;
@@ -115,8 +115,7 @@
     display: flex;
     font-weight: 500;
     padding: 1rem 2rem;
-    border-radius: 5px;
-    box-shadow: 0 1px 0 rgba($orange, .7);
+    border-bottom: 1px solid rgba($orange, 0.5);
 
     @include breakpoint($screen-990) {
       font-size: 1.2rem;
@@ -125,7 +124,7 @@
 
   &__title-type {
     &::after {
-      content: "|";
+      content: '|';
       padding: 0 1rem;
     }
   }
@@ -168,7 +167,7 @@
     justify-content: flex-end;
 
     &::after {
-      content: "|";
+      content: '|';
       color: #2a2a2a;
       padding-left: 1rem;
     }

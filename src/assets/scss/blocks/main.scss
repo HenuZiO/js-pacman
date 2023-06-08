@@ -1,58 +1,58 @@
 /* Block - main */
 .page {
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-	grid-template-rows: auto 1fr auto;
-	grid-template-areas:
-		'header header header'
-		'body body body'
-		'footer footer footer';
-	height: 100%;
-	overflow-x: hidden;
-	position: relative;
-	column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header header header'
+    'body body body'
+    'footer footer footer';
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  column-gap: 2rem;
 }
 
 .page-dashboard {
-	display: flex;
-	gap: 2rem;
+  display: flex;
+  gap: 2rem;
 
-	&--content {
-		width: 100%;
-	}
+  &--content {
+    width: 100%;
+  }
 }
 
 .layout-header {
-	grid-area: header;
-	background-color: #fff33a;
-	margin-bottom: 15rem;
+  grid-area: header;
+  background-color: #fff33a;
+  margin-bottom: 15rem;
 }
 
 .layout-sidebar {
-	grid-area: sidebar;
+  grid-area: sidebar;
 }
 
 .layout-content {
-	grid-area: body;
-	height: 100%;
-	padding: 0 2rem;
+  grid-area: body;
+  height: 100%;
+  padding: 0 2rem;
 }
 
 .layout-footer {
-	grid-area: footer;
-	position: relative;
+  grid-area: footer;
+  position: relative;
 }
 
 .container,
 .container-flex {
-	max-width: 1690px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 3rem;
+  max-width: 1690px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
 
-	@include breakpoint($screen-375) {
-		padding: 0 1.5rem;
-	}
+  @include breakpoint($screen-375) {
+    padding: 0 1.5rem;
+  }
 }
 
 /* end Block - main */
