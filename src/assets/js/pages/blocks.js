@@ -23,6 +23,7 @@ function loadBlocksOnPage(poolBlocksData) {
 		poolBlocksCount += 1;
 
 		blockCard += `
+    
     <div class="tabs_mobile__item">
           <ul class="tabs_mobile__definitions">
             <li class="tabs_mobile__definition-item tabs_mobile__definition-item--date2">

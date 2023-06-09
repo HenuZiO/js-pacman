@@ -2,7 +2,6 @@
 //= main/getApiData.js
 //= main/miningcore.js
 //= components/coinInfoCard.js
-//= components/searchWallet.js
 //= components/loadPoolList.js
 //= components/networkStats.js
 //= components/poolStats.js
@@ -15,6 +14,7 @@
 //= components/lastPoolBlocks.js
 //= components/lastPoolPayouts.js
 //= components/blankMinerPage.js
+//= components/openDashboardPage.js
 //= components/openBlockPage.js
 //= components/openPaymentsPage.js
 //= components/openMinersPage.js
@@ -31,3 +31,4 @@
 //= utils/stripUrl.js
 //= utils/convertUTCdate.js
 //= utils/formatHash.js
+//= components/searchWallet.js

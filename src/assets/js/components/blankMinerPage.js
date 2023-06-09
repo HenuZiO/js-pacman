@@ -20,7 +20,7 @@ function loadBlankMinerPage(pool, poolData) {
 
 	alertMessage = `
       <div class="additional-stats">
-    <div class="additional-stats__item">
+    <div class="additional-stats__item additional-stats__item--alert">
       <span class="additional-stats__item-text additional-stats__item-text--alert">
         <span class=" additional-stats__item-text--orange-title">
         Hey, miner!

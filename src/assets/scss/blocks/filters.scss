@@ -2,38 +2,76 @@
 .understats-line {
 	display: flex;
 	gap: 2rem;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	align-items: center;
+
+	@include breakpoint($screen-667) {
+		flex-direction: column;
+	}
 
 	&__list {
 		display: flex;
+		justify-content: flex-start;
+		gap: 1rem;
+
+		@include breakpoint($screen-667) {
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		background-color: transparent;
+		border-bottom: 1px solid $orange;
+		padding: 1rem;
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			background-color: $orange;
+			border-bottom: 1px solid #2c2c2c;
+
+			.understats-line__link {
+				color: #2c2c2c;
+			}
+		}
+
+		&--back {
+			border: 1px solid $orange;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
 	}
 }
 
 .filters {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+
+	@include breakpoint($screen-667) {
+		justify-content: center;
+	}
+
 	&__item {
-		max-width: 350px;
+		max-width: 400px;
 		width: 100%;
 		box-shadow: 0 15px 25px rgba(#000, 0.45);
 		display: flex;
 		position: relative;
 
 		@include breakpoint($screen-667) {
+			max-width: 1000px;
 			margin-left: 1rem;
 			margin-right: 1rem;
 			width: 100%;
-			box-shadow: 0 5px 15px rgba(#000, 0.25);
-		}
-
-		@include breakpoint($screen-414) {
-			width: 100%;
-			margin: 1rem 0;
-			box-shadow: 0 5px 15px rgba(#000, 0.25);
-		}
-
-		@include breakpoint($screen-375) {
-			width: 100%;
-			margin: 1rem 0;
 			box-shadow: 0 5px 15px rgba(#000, 0.25);
 		}
 	}

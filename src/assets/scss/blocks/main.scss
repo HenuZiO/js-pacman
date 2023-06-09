@@ -48,6 +48,7 @@
 	max-width: 1690px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 2rem;
 
 	@include breakpoint($screen-375) {
 		padding: 0 1.5rem;

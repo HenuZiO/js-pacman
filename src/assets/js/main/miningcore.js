@@ -29,6 +29,7 @@ const getProjectData = () =>
 				$('.page-payments').hide();
 				$('.sidebar-coin').show();
 				$('.page-dashboard').show();
+				$('.understats-line__item--back').hide();
 				loadDashboardPage(
 					poolsData,
 					poolData,
@@ -104,6 +105,7 @@ function loadDashboardPage(
 		loadLastMinerBlocks(poolBlocksData);
 		loadLastPoolBlocks(poolBlocksData);
 		lastPoolPayouts(poolPaymentData);
+		$('.understats-line__item--back').show();
 	}
 
 	if (currentPool && !currentAddress) {

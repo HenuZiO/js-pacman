@@ -14,6 +14,10 @@
 		flex-grow: 1;
 		padding: 1rem;
 		border-radius: 5px;
+
+		&--alert {
+			border: none;
+		}
 	}
 
 	&__item-title {
@@ -66,7 +70,11 @@
 
 		&--orange-title {
 			display: block;
-			margin: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		&--orange-title:not(:first-child) {
+			margin: 2rem 0;
 		}
 
 		&--alert {
