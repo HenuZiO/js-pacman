@@ -56,7 +56,7 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 		lastDayMinerBlocks.length >= 2
 			? (mostRecentBlockTimeInSeconds - mostAncientBlockTimeInSeconds) /
 			  (mostRecentBlockHeight - mostAncientBlockHeight)
-			: 'Need more blocks to info';
+			: 'Need more blocks...';
 
 	let formattedNetworkBlockTime =
 		networkBlockTime < 60

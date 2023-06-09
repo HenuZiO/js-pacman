@@ -84,7 +84,7 @@ function loadNetworkStats(poolData, poolBlocksData) {
               <span class="main-stats__span-right">${
 								formattedNetworkBlockTime
 									? formattedNetworkBlockTime
-									: 'No info'
+									: 'Calculation in progress...'
 							}</span>
             </li>
           </ul>

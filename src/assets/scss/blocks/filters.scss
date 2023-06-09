@@ -1,51 +1,19 @@
 /* Block - filters */
+.understats-line {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__list {
+		display: flex;
+	}
+}
 
 .filters {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-
-	@include breakpoint($screen-800) {
-		max-width: 760px;
-		width: 100%;
-	}
-
-	@include breakpoint($screen-740) {
-		max-width: 680px;
-		width: 100%;
-	}
-
-	@include breakpoint($screen-667) {
-		max-width: 627px;
-		width: 100%;
-	}
-
-	@include breakpoint($screen-414) {
-		max-width: 374px;
-		flex-direction: column;
-	}
-
-	@include breakpoint($screen-393) {
-		max-width: 353px;
-		flex-direction: column;
-	}
-
-	@include breakpoint($screen-390) {
-		max-width: 350px;
-		flex-direction: column;
-	}
-
-	@include breakpoint($screen-375) {
-		flex-direction: column;
-	}
-
-	@include breakpoint($screen-360) {
-		max-width: 320px;
-	}
-
 	&__item {
-		width: 350px;
-		margin-left: 2rem;
+		max-width: 350px;
+		width: 100%;
 		box-shadow: 0 15px 25px rgba(#000, 0.45);
 		display: flex;
 		position: relative;

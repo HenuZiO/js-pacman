@@ -111,7 +111,7 @@ function loadDashboardPage(
 		$('.additional-stats').hide();
 		$('.miners-hash').hide();
 		$('.stat-tabs').hide();
-		loadBlankMinerPage(currentPool);
+		loadBlankMinerPage(currentPool, poolData);
 	}
 }
 

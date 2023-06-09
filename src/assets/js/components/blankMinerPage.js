@@ -1,5 +1,24 @@
-function loadBlankMinerPage(pool) {
-  alertMessage = `
+function loadBlankMinerPage(pool, poolData) {
+	let coinName = poolData.pool.coin.name;
+	let coinAlgo = poolData.pool.coin.algorithm;
+	let poolPayoutScheme = poolData.pool.paymentProcessing.payoutScheme;
+	let coinTicker = poolData.pool.coin.symbol;
+	let poolPorts = poolData.pool.ports;
+	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
+	let poolFee = poolData.pool.poolFeePercent;
+
+	let connectPorts = ``;
+
+	Object.keys(poolPorts).forEach(key => {
+		connectPorts += `
+      <tr>
+			  <td>${poolPorts[key].name} • Diff ${poolPorts[key].difficulty}</td>
+			  <td class='connection-info--poolFee'>stratum.miningpacman.pw:${key}</td>
+		  </tr>
+    `;
+	});
+
+	alertMessage = `
       <div class="additional-stats">
     <div class="additional-stats__item">
       <span class="additional-stats__item-text additional-stats__item-text--alert">
@@ -14,38 +33,49 @@ function loadBlankMinerPage(pool) {
         <span class=" additional-stats__item-text--orange-title">
         Connection info
         </span>
-        <table class="iksweb">
-	<tbody>
+  <table class="connection-table">
+  <thead>
 		<tr>
-			<td>Coin Name</td>
-			<td>1</td>
+			<th>Main Info</th>
+      <th></th>
 		</tr>
+	</thead>
+	  <tbody>
+		  <tr>
+			  <td>Coin Name</td>
+			  <td class='connection-info--coin'>${coinName} (${coinTicker})</td>
+		  </tr>
+		  <tr>
+			  <td>Coin Algorithm</td>
+			  <td class='connection-info--algo'>${coinAlgo}</td>
+		  </tr>
+		  <tr>
+			  <td>Payout Scheme</td>
+			  <td class='connection-info--payout'>${poolPayoutScheme}</td>
+		  </tr>
+		  <tr>
+			  <td>Minimum Payment</td>
+			  <td class='connection-info--minPay'>${minPayout} ${coinTicker}</td>
+		  </tr>
+    	<tr>
+			  <td>Pool fee</td>
+			  <td class='connection-info--poolFee'>${poolFee}%</td>
+		  </tr>
+	  </tbody>
+      <thead>
 		<tr>
-			<td>Coin Algorithm</td>
-			<td>2</td>
+			<th>Connect Info</th>
+      <th></th>
 		</tr>
-		<tr>
-			<td>Pool Wallet</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>Payout Scheme</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td>Minimum Payment</td>
-			<td>5</td>
-		</tr>
-    		<tr>
-			<td>Pool fee</td>
-			<td>6</td>
-		</tr>
-	</tbody>
-</table>
+	</thead>
+  	  <tbody>
+    ${connectPorts}
+	  </tbody>
+  </table>
       </span>
     </div>
   </div>
     `;
 
-  $('.alertMessage').html(alertMessage);
+	$('.alertMessage').html(alertMessage);
 }
