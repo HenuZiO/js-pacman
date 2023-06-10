@@ -19,13 +19,23 @@
 	z-index: $z-index-header;
 
 	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-55%, -19%);
+
+		@include breakpoint($screen-915) {
+			left: 0;
+			right: 50%;
+			transform: translate(100%, -19%);
+		}
 	}
 
 	&__logo-img {
 		display: flex;
 		align-items: center;
 		padding-top: 1rem;
-		max-width: 50px;
+		max-width: 350px;
 		margin-left: 2rem;
 	}
 

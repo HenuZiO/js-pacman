@@ -1,4 +1,6 @@
 function loadNetworkStats(poolData, poolBlocksData) {
+	const REWARDS = { OCTA: 3 };
+
 	let coinName = poolData.pool.coin.name;
 	let coinTicker = poolData.pool.coin.symbol;
 
@@ -17,9 +19,11 @@ function loadNetworkStats(poolData, poolBlocksData) {
 		poolData.pool.networkStats.lastNetworkBlockTime
 	).toLocaleString();
 
-	let blockReward = poolBlocksData[1]
-		? poolBlocksData[poolBlocksData.length - 1].reward.toFixed(3)
-		: 'No info';
+	let blockReward = 0;
+
+	Object.keys(REWARDS).filter(el => {
+		if (el == coinTicker) blockReward += REWARDS[el];
+	});
 
 	let formattedNetworkBlockTime;
 

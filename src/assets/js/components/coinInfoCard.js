@@ -27,7 +27,7 @@ function loadPoolCardInfo(poolData) {
 	} else {
 		const explorerLink = $('.sidebar-coin__info-link--explorer').attr(
 			'href',
-			`${coinExplorer}`
+			`${coinExplorer.split('address')[0]}`
 		);
 	}
 	if (!coinDiscord) {

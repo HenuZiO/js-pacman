@@ -27,17 +27,24 @@ title: MiningPACMan.pw • Mining Pool
 	</div>
 
 	<div class="container">
-		<div class="filters">
-			<div class="filters__item">
-				<form class="filters__search-form">
-					<input
-						id="liveSearch"
-						class="filters__search-input"
-						type="text"
-						placeholder="Typing the name of the coin..."
-					/>
-					<button class="filters__btn-search" type="button"></button>
-				</form>
+		<div class="understats-line">
+			<div class="filters">
+				<div class="filters__item">
+					<form id="searchWallet" class="filters__search-form">
+						<input
+							id="searchWallet-input"
+							class="filters__search-input"
+							type="text"
+							placeholder="Enter your wallet address..."
+						/>
+						<button
+							id="filters__btn-search--wallet"
+							class="filters__btn-search"
+							type="submit"
+							onclick="searchWalletData()"
+						></button>
+					</form>
+				</div>
 			</div>
 		</div>
 
