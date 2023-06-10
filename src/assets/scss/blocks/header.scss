@@ -22,11 +22,11 @@
 	}
 
 	&__logo-img {
-		position: absolute;
+		display: flex;
+		align-items: center;
+		padding-top: 1rem;
 		max-width: 50px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -35%);
+		margin-left: 2rem;
 	}
 
 	&__menu {

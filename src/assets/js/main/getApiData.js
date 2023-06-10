@@ -10,7 +10,7 @@ async function getPoolsData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
 }
 
@@ -23,7 +23,7 @@ async function getPoolData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
 }
 
@@ -36,7 +36,7 @@ async function getPoolBlocksData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
 }
 
@@ -49,7 +49,7 @@ async function getPoolPaymentsData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
 }
 
@@ -62,11 +62,8 @@ async function getMinersData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
-}
-
-if (currentPool && currentAddress) {
 }
 
 async function getMinerData() {
@@ -78,7 +75,7 @@ async function getMinerData() {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		// console.error(`Could not get products: ${error}`);
+		console.error(`Could not get products: ${error}`);
 	}
 }
 

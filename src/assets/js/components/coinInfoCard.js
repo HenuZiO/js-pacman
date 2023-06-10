@@ -59,7 +59,7 @@ function loadPoolCardInfo(poolData) {
 		`${coinName} (${coinTicker})`
 	);
 	const connectAlgo = $('.sidebar-coin__info-connect-item--algo').text(
-		coinAlgo
+		coinAlgo == 'Ethhash' ? 'ETHASH' : coinAlgo.toUpperCase()
 	);
 	const connectPayoutScheme = $(
 		'.sidebar-coin__info-connect-item--payout'

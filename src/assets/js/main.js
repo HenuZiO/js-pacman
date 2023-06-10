@@ -1,4 +1,5 @@
 //= main/jquery.js
+//= components/loader.js
 //= main/getApiData.js
 //= main/miningcore.js
 //= components/coinInfoCard.js

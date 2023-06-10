@@ -47,7 +47,9 @@ function loadBlankMinerPage(pool, poolData) {
 		  </tr>
 		  <tr>
 			  <td>Coin Algorithm</td>
-			  <td class='connection-info--algo'>${coinAlgo}</td>
+			  <td class='connection-info--algo'>${
+					coinAlgo == 'Ethhash' ? 'ETHASH' : coinAlgo.toUpperCase()
+				}</td>
 		  </tr>
 		  <tr>
 			  <td>Payout Scheme</td>

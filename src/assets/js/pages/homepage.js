@@ -28,7 +28,9 @@ function loadHomePage(data) {
      <section class="coin-sort">
      <div class="coin-sort__left">
      <h4 class="coin-sort__title">
-     <span class='text-orange'>${value}</span> algorithm
+     <span class='text-orange'>${
+				value == 'Ethhash' ? 'ETHASH' : value.toUpperCase()
+			}</span> algorithm
      </h4></div>
 
      <div class="coin-sort__right">
@@ -47,7 +49,10 @@ function loadHomePage(data) {
 
 			let coinName = value.coin.name;
 			let coinTicket = value.coin.symbol;
-			let coinAlgo = value.coin.algorithm;
+			let coinAlgo =
+				value.coin.algorithm == 'Ethhash'
+					? 'ETHASH'
+					: value.coin.algorithm.toUpperCase();
 
 			if (typeof coinName === 'undefined' || coinName === null) {
 				coinName = value.coin.type;
