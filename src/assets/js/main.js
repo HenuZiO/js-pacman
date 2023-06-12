@@ -2,6 +2,10 @@
 //= components/loader.js
 //= main/getApiData.js
 //= main/miningcore.js
+//= functional/chartist.js
+//= functional/liveSearch.js
+//= functional/coinTabs.js
+//= components/searchWallet.js
 //= components/coinInfoCard.js
 //= components/loadPoolList.js
 //= components/networkStats.js
@@ -25,11 +29,7 @@
 //= pages/miners.js
 //= functional/spoilerSidebar.js
 //= functional/mobileNav.js
-//= functional/liveSearch.js
-//= functional/coinTabs.js
-//= functional/chartist.js
 //= utils/stripWallet.js
 //= utils/stripUrl.js
 //= utils/convertUTCdate.js
 //= utils/formatHash.js
-//= components/searchWallet.js

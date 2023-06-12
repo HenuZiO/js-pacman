@@ -30,7 +30,7 @@ async function getPoolData() {
 async function getPoolBlocksData() {
 	try {
 		const response = await fetch(
-			`https://api.miningpacman.pw/api/pools/${currentPool}/blocks?pageSize=150`
+			`https://api.miningpacman.pw/api/pools/${currentPool}/blocks?pageSize=1000`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();

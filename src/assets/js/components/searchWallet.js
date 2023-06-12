@@ -1,14 +1,12 @@
 function searchWalletData() {
-	if ($('#searchWallet-input').val().length > 0) {
-		localStorage.setItem(
-			currentPool + '-searchWallet-input',
-			$('#searchWallet-input').val()
-		);
-	}
-	let href = '#' + currentPool + '/dashboard/' + $('#searchWallet-input').val();
+	let userQuery = document.querySelector('#searchWallet-input').value;
 
-	$(document).ready(function () {
-		window.location.href = href;
-		window.location.reload();
-	});
+	if (userQuery.length > 0) {
+		localStorage.setItem(currentPool + '-enteredSearchWallet', userQuery);
+	}
+
+	let href = `#${currentPool}/dashboard/${userQuery}`.replace('?', '');
+
+	window.location.assign(href);
+	window.location.reload();
 }
