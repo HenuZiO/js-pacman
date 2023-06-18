@@ -1,5 +1,5 @@
 function loadNetworkStats(poolData, poolBlocksData) {
-	const REWARDS = { OCTA: 3 };
+	const REWARDS = { OCTA: 3, BLACK: 27 };
 
 	let coinName = poolData.pool.coin.name;
 	let coinTicker = poolData.pool.coin.symbol;

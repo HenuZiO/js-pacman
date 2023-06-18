@@ -9,6 +9,7 @@ function loadPoolCardInfo(poolData) {
 	let coinTwitter = poolData.pool.coin.twitter;
 
 	let poolPayoutScheme = poolData.pool.paymentProcessing.payoutScheme;
+	let poolWallet = poolData.pool.address;
 	let poolPorts = poolData.pool.ports;
 	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
 	let poolFee = poolData.pool.poolFeePercent;
@@ -70,6 +71,9 @@ function loadPoolCardInfo(poolData) {
 	const connectPoolFee = $('.sidebar-coin__info-connect-item--poolFee').text(
 		`${poolFee}%`
 	);
+	const connectPoolWallet = $(
+		'.sidebar-coin__info-connect-item--poolWallet'
+	).text(stripWallet(poolWallet));
 
 	let connectPorts = ``;
 

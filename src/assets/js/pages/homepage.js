@@ -47,7 +47,7 @@ function loadHomePage(data) {
 				value.coin.type.toLowerCase() +
 				".png' />";
 
-			let coinName = value.coin.name;
+			let coinName = value.coin.name.split('-')[0];
 			let coinTicket = value.coin.symbol;
 			let coinAlgo =
 				value.coin.algorithm == 'Ethhash'
@@ -62,7 +62,13 @@ function loadHomePage(data) {
         <section class='coin-item' href='#${value.id}/dashboard/'>
           <div class='coin-item__top-inner'>
             ${coinLogoHTML}
-            <h3 class='coin-item__top-title'>${coinName} (${coinTicket})</h3>
+            <h3 class='coin-item__top-title'>${coinName} (${coinTicket})
+            ${
+							coinTicket == 'OCTA'
+								? `<span class='coin-item__pac'>+ $PAC</span>`
+								: ''
+						}
+            </h3>
           </div>
           <div class="coin-item__main">
             <ul class="coin-item__main-list">

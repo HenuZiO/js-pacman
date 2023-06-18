@@ -6,6 +6,7 @@ function loadBlankMinerPage(pool, poolData) {
 	let poolPorts = poolData.pool.ports;
 	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
 	let poolFee = poolData.pool.poolFeePercent;
+	let poolWallet = poolData.pool.address;
 
 	let connectPorts = ``;
 
@@ -62,6 +63,14 @@ function loadBlankMinerPage(pool, poolData) {
     	<tr>
 			  <td>Pool fee</td>
 			  <td class='connection-info--poolFee'>${poolFee}%</td>
+		  </tr>
+          	<tr>
+			  <td>Pool wallet</td>
+			  <td class='connection-info--poolFee'>${poolWallet}</td>
+		  </tr>
+                	<tr>
+			  <td></td>
+			  <td class='connection-info--poolFee'></td>
 		  </tr>
 	  </tbody>
       <thead>
