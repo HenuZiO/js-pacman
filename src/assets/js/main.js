@@ -14,6 +14,7 @@
 //= components/additionalStats.js
 //= components/workersList.js
 //= components/minerGraph.js
+//= components/dailyRewards.js
 //= components/lastMinerPayments.js
 //= components/lastMinerBlocks.js
 //= components/lastPoolBlocks.js

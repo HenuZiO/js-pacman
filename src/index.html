@@ -422,8 +422,9 @@ title: MiningPACMan.pw • Mining Pool
 			<!-- stat tabs row-->
 			<div class="stat-tabs__row">
 				<button class="stat-tabs__btn stat-tabs__btn--active">
-					Last Personal payouts
+					Daily Rewards
 				</button>
+				<button class="stat-tabs__btn">Last Personal payouts</button>
 				<button class="stat-tabs__btn">Last miner blocks</button>
 				<button class="stat-tabs__btn">Last pool blocks</button>
 				<button class="stat-tabs__btn">Last pool payouts</button>
@@ -432,9 +433,23 @@ title: MiningPACMan.pw • Mining Pool
 
 			<!-- stat tabs content-->
 			<div class="stat-tabs__content">
+				<!-- Daily payments -->
+				<div class="stat-tabs__content-item stat-tabs__content-item--show">
+					<table class="connection-table">
+						<thead>
+							<tr>
+								<th>Amount</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody class="stat-tabs__content-item--dailyRewards"></tbody>
+					</table>
+				</div>
+				<!-- /Daily payments-->
+
 				<!-- Personal payouts block -->
 				<div
-					class="stat-tabs__content-item stat-tabs__content-item--show stat-tabs__content-item--personalPayout"
+					class="stat-tabs__content-item stat-tabs__content-item--personalPayout"
 				>
 					<!-- 1 item-->
 
