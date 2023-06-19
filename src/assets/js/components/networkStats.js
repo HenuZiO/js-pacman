@@ -1,5 +1,5 @@
 function loadNetworkStats(poolData, poolBlocksData) {
-	const REWARDS = { OCTA: 3, BLACK: 27 };
+	const REWARDS = { OCTA: 3, BLACK: 27, GRAMS: 0.1 };
 
 	let coinName = poolData.pool.coin.name;
 	let coinTicker = poolData.pool.coin.symbol;
@@ -80,7 +80,7 @@ function loadNetworkStats(poolData, poolBlocksData) {
             <li class="main-stats__list-item">
               <span class="main-stats__span-left">Block reward</span>
               <span class="main-stats__span-right">
-              ${blockReward}
+              ${blockReward} ${coinTicker}
               </span>
             </li>
             <li class="main-stats__list-item">
