@@ -102,6 +102,7 @@ function loadDashboardPage(
 		loadWorkerList(minerData);
 		loadMinerGraph(minerData);
 		dailyRewards();
+		balanceChanges();
 		loadLastMinerPayouts(minerPaymentsData);
 		loadLastMinerBlocks(poolBlocksData);
 		loadLastPoolBlocks(poolBlocksData);
