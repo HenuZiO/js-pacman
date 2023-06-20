@@ -10,7 +10,7 @@ function loadMinersOnPage(poolMinersData) {
           <span class="tabs_mobile__item--index">${index + 1}</span>
           <ul class="tabs_mobile__definitions">
             <li class="tabs_mobile__definition-item tabs_mobile__definition-item--date">
-              <span class="tabs_mobile__definition">${miner}</span>
+              <span class="tabs_mobile__definition"><a class="tabs_mobile__definition--link" href='' onclick='openMinerDashboard("${miner}")'>${miner}</a></span>
               <span class="tabs_mobile__term">Miner</span>
             </li>
             <li class="tabs_mobile__definition-item tabs_mobile__definition-item--amount">
@@ -20,6 +20,8 @@ function loadMinersOnPage(poolMinersData) {
           </ul>
         </div>
     `;
+
+		console.log(miner);
 	});
 
 	$('.page-miners__miners-area').html(payoutCard);

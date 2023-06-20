@@ -31,6 +31,7 @@
 //= pages/miners.js
 //= functional/spoilerSidebar.js
 //= functional/mobileNav.js
+//= utils/followPage.js
 //= utils/stripWallet.js
 //= utils/stripUrl.js
 //= utils/convertUTCdate.js

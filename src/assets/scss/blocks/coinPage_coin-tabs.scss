@@ -176,6 +176,22 @@
 		font-size: 1.3rem;
 		color: #ccc;
 		word-break: break-all;
+
+		&--link {
+			color: rgba($orange, 0.75);
+			text-decoration: none;
+
+			&:hover {
+				color: darken($orange, 8%);
+				padding-bottom: 0.1rem;
+				border-bottom: 1px dashed $orange;
+			}
+
+			&:active {
+				color: #ccc;
+				border-bottom: 1px dashed #ccc;
+			}
+		}
 	}
 
 	&__item-link {

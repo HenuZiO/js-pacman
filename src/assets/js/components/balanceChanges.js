@@ -5,18 +5,12 @@ async function balanceChanges() {
 	const balanceHistory = await balanceChangesFetch.json();
 
 	let tableContent = ``;
-	let totalBalance = 0;
 
 	Object.keys(balanceHistory).forEach(key => {
 		tableContent += `
 		<tr>
     <td>${new Date(balanceHistory[key].created).toLocaleString()}</td>
 			<td>${balanceHistory[key].amount}</td>
-			<td>${
-				balanceHistory[key].amount > 0
-					? (totalBalance -= balanceHistory[key].amount)
-					: (totalBalance += balanceHistory[key].amount)
-			}</td>
       <td>${balanceHistory[key].usage}</td>
 		</tr>
 		`;
