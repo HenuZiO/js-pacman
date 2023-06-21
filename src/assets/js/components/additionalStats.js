@@ -10,12 +10,14 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 	}
 
 	const lastDayMinerBlocks = poolBlocksData
-		.filter(el => el.miner == currentAddress)
 		.filter(el => {
 			let blockTime = new Date(el.created).getTime();
 			let currentTime = new Date().getTime();
 			if (currentTime - blockTime < 86400000) return el;
-		});
+		})
+		.filter(
+			el => el.miner.toLowerCase().trim() == currentAddress.toLowerCase().trim()
+		);
 
 	let minerHash = 0;
 	if (minerData.performance) {
