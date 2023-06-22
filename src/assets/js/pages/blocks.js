@@ -16,7 +16,7 @@ function loadBlocksOnPage(poolBlocksData) {
 		const blockMiner = stripWallet(el.miner);
 		const blockEffort = (el.effort * 100).toFixed(2);
 		const blockStatus = el.status;
-		const blockReward = el.reward.toFixed(0);
+		const blockReward = el.reward;
 		const blockConfirmations = (el.confirmationProgress * 100).toFixed(2);
 
 		if (poolBlocksCount > 50) return;
