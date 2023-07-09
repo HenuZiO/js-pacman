@@ -18,7 +18,7 @@ function loadPoolStats(poolData, poolBlocksData) {
 		: 'No blocks on pool yet';
 	let poolEffort = (poolData.pool.poolEffort * 100).toFixed(2);
 	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
-	let poolFee = poolData.pool.poolFeePercent;
+	let poolFee = 1.1;
 
 	const poolStatsCard = `
           <div class="main-stats__title">

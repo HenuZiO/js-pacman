@@ -5,7 +5,7 @@ function loadBlankMinerPage(pool, poolData) {
 	let coinTicker = poolData.pool.coin.symbol;
 	let poolPorts = poolData.pool.ports;
 	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
-	let poolFee = poolData.pool.poolFeePercent;
+	let poolFee = 1.1;
 	let poolWallet = poolData.pool.address;
 
 	let connectPorts = ``;

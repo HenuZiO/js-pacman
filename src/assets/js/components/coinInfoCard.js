@@ -12,7 +12,7 @@ function loadPoolCardInfo(poolData) {
 	let poolWallet = poolData.pool.address;
 	let poolPorts = poolData.pool.ports;
 	let minPayout = poolData.pool.paymentProcessing.minimumPayment;
-	let poolFee = poolData.pool.poolFeePercent;
+	let poolFee = 1.1;
 
 	$('.sidebar-coin__block-text').text(coinTicker);
 
